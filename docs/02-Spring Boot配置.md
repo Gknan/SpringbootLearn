@@ -395,15 +395,71 @@ run->configuration->enviroment->VM Options:  `-Dspring.profiles.active=dev`
 
 Spring Boot 启动会扫描以下位置的 applicaiton.properties 或者 application.yml 文件作为 Spring Boot 的默认配置文件
 
-flie: ./config/
+flie: ./config/ 
 
-file: ./
+file: ./ **当前项目根目录下 如果是 父 pom 下的子项目启动，这里的配置位置还是父项目根路径下的配置文件，不会去子项目下非资源路径找**
 
 classpath: /config/
 
 classpath: /
 
-以上是按照优先级从高到低的顺序，所有位置的文件都会 被加载。
+以上是按照优先级从高到低的顺序，所有位置的文件都会被加载。高优先级的配置会覆盖低优先级的配置。SpringBoot 会从这四个位置全部加载配置文件。**互补配置**。
+
+高优先级配置部分内容，低优先级配置所有内容。
+
+可以使用 spring.config.location 指定配置文件位置
+
+**项目打包以后，可以使用命令行参数的形式，启动项目的时候指定配置文件的新位置，指定的配置文件和默认加载的配置文件共同起作用，形成互补配置。**
+
+### 七、外部配置加载顺序
+
+Spring Boot 支持多种外部配置方式，可以从以下位置加载配置，**按照优先级从高到低，高优先级的配置覆盖低优先级的配置，不同内容则形成互补配置。**
+
+1. **命令行参数**
+
+   ```bash
+   java -jar myapp.jar --server.port=8087 --context-path=/abc
+   ```
+
+   多个配置用空格分开：--配置项=值
+
+2. 来自 java:comp/env 的 NDI 属性
+
+3. Java 系统属性（System.getProperties）
+
+4. 操作系统环境变量
+
+5. RandomValuePropertySource 配置的 random.* 属性值
+
+6. **jar 包外部的 application-{profile}.properties/yml(带 spring.profile) 配置文件**
+
+7. **jar 包内部的 application-{profile}.properties/yml(带 spring.profile) 配置文件**
+
+8. **jar 包外部的 application.properties/yml(不带 spring.profile) 配置文件**
+
+9. **jar 包内部的 application.properties/yml(不带 spring.profile) 配置文件**
+
+10. @Configuration 注解类上的 @PropertySource
+
+11. 通过 SpringApplication.setDefaultProperties 指定的默认属性
+
+6/7/8/9 总结：优先加载带 profile ，再来加载不带 profile；由 jar 包外向 jar 包内进行寻找
+
+6 8 外部的配置文件要和 jar 包在同一文件夹下
+
+![](G:\learn-skills\springbootlearn\docs\pics\09-spring外部化配置.png)
+
+[更多详细参考官方文档](https://docs.spring.io/spring-boot/docs/2.2.6.RELEASE/reference/htmlsingle/#boot-features-external-config)
+
+### 八、自动配置原理
+
+
+
+
+
+
+
+
 
 
 
