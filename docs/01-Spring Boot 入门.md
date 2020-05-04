@@ -315,7 +315,7 @@ public @interface EnableAutoConfiguration {
 
 ### 六、使用 Spring Initializer 快速创建 Spring Boot 项目
 
-IDE 都支持使用 Spring 的项目创建向导快速创建 Spring Boot 项目。
+IDE 都支持使用 Spring 的项目创建向导快速创建 Spring Boot 项目
 
 new -> spring initailizer -> 选择需要的模块
 
