@@ -1,0 +1,15 @@
+2020-05-05 07:10:58.135  INFO 13952 --- [main] c.h.s.SpringBoot03LoggingApplication     : Starting SpringBoot03LoggingApplication on DESKTOP-8IPKGHU with PID 13952 (G:\learn-skills\springbootlearn\spring-boot-03-logging\target\classes started by Gknan in G:\learn-skills\springbootlearn)
+2020-05-05 07:10:58.141 DEBUG 13952 --- [main] c.h.s.SpringBoot03LoggingApplication     : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-05-05 07:10:58.141  INFO 13952 --- [main] c.h.s.SpringBoot03LoggingApplication     : No active profile set, falling back to default profiles: default
+2020-05-05 07:11:00.271  INFO 13952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-05-05 07:11:00.285  INFO 13952 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-05 07:11:00.285  INFO 13952 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-05-05 07:11:00.287  INFO 13952 --- [main] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-05-05 07:11:00.288  INFO 13952 --- [main] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-05-05 07:11:00.288  INFO 13952 --- [main] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-05-05 07:11:00.426  INFO 13952 --- [main] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-05-05 07:11:00.606  INFO 13952 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-05-05 07:11:00.606  INFO 13952 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2358 ms
+2020-05-05 07:11:00.906  INFO 13952 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-05 07:11:01.123  INFO 13952 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2020-05-05 07:11:01.128  INFO 13952 --- [main] c.h.s.SpringBoot03LoggingApplication     : Started SpringBoot03LoggingApplication in 3.811 seconds (JVM running for 5.894)
