@@ -263,7 +263,7 @@ public @interface SpringBootApplication {
 
 ​	标准在某个类上，表示这是一个 Spring Boot 配置类。
 ​	@Configuration 配置类上来标注这个注解。
-​		配置类也是容器中的一个组价： @Component
+​		配置类也是容器中的一个组件： @Component
 ​		配置类 -- 代替配置文件
 
 **@EnableAutoConfiguration**：开启自动配置功能

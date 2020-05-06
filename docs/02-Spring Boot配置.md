@@ -55,9 +55,9 @@ server:
 k: v 直接来写
 
 字符串默认不用加上单引号或双引号；
-""；双引号，不会转移字符串中的特殊字符；特殊字符作为本身表示的意思
+""；双引号，不会转义字符串中的特殊字符；特殊字符作为本身表示的意思
 
-name: 'zhangsan \n list' 输出 zhangsan 换行 list
+name: “zhangsan \n list” 输出 zhangsan 换行 list
 
 '': 单引号，转移特殊字符，特殊字符最终只是一个普通的字符串数据
 name: 'zhangsan \n list' 输出 zhangsan \n list
@@ -593,7 +593,7 @@ org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration
 @ConditionalOnWebApplication
 // 判断当前项目中有没有 CharacterEncodingFilter 类，SpringMVC 乱码解决的过滤器
 @ConditionalOnClass(CharacterEncodingFilter.class)
-// 判断配置文件中是否存在某个配置 spring.http.encoding，乳沟不存在，判断也有效；即使配置文件中不配置该属性，也是默认生效的
+// 判断配置文件中是否存在某个配置 spring.http.encoding，如果不存在，判断也有效；即使配置文件中不配置该属性，也是默认生效的
 @ConditionalOnProperty(prefix = "spring.http.encoding", value = "enabled", matchIfMissing = true)
 public class HttpEncodingAutoConfiguration {
     // 已经和 Spring Boot 的配置文件映射了
